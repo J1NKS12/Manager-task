@@ -124,7 +124,7 @@
 .list__item-description,
 .list__item-tag,
 .list__item-date {
-  overflow-wrap: break-word; // 👈 Переносит длинные слова
-  word-wrap: break-word; // 👈 Для старых браузеров
-  word-break: break-word; // 👈 Переносит любые длинные слова
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
