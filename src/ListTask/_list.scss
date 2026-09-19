@@ -1,0 +1,130 @@
+@import "../../SASS/base/mixin.scss";
+@import "../../SASS/base/variables";
+
+.list__container {
+  display: grid;
+  grid-template-columns: $grid-template-columns-three;
+  gap: 8px;
+
+  @media (max-width: $desktop) {
+    grid-template-columns: $grid-template-columns-three;
+  }
+
+  @media (max-width: $laptop) {
+    grid-template-columns: $grid-template-columns-two;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: $grid-template-columns-one;
+  }
+  @media (max-width: $mobile-large) {
+    grid-template-columns: $grid-template-columns-one;
+  }
+  @media (max-width: $mobile) {
+    grid-template-columns: $grid-template-columns-one;
+  }
+}
+
+.list__item {
+  @include glass-card;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 200px;
+  &-title {
+    font-size: clamp(18px, 1.5vw, 23px);
+    margin-bottom: 10px;
+    border-bottom: 2px dotted black;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &-btn {
+    display: flex;
+    gap: 5px;
+
+    &--delete,
+    &--edit {
+      display: flex;
+      align-items: center;
+      border: $border-black;
+      border-radius: 5px;
+      padding: 1px;
+      transition: $primary-transition;
+      color: #333;
+      width: 25px;
+      height: 25px;
+    }
+
+    &--delete:hover {
+      color: red;
+      border: $border-red;
+    }
+
+    &--edit:hover {
+      color: brown;
+      border: 1px solid brown;
+    }
+  }
+
+  &-description {
+    font-size: clamp(13px, 1.5vw, 16px);
+    margin-bottom: $margin-bottom;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &-complete-and-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  &-complete {
+    padding: $primary-padding;
+    border-radius: $primary-radius;
+    border: $border-red;
+    background-color: rgb(244, 209, 209);
+    color: red;
+    cursor: $cursor;
+    @include adaptive-size;
+
+    &--rad {
+      border-color: red;
+      background: rgb(244, 209, 209);
+      color: red;
+    }
+
+    &--aqua {
+      border-color: aqua;
+      background: rgb(170, 242, 242);
+      color: $primary-color;
+    }
+  }
+
+  &-date {
+    border: $border-black;
+    border-radius: $primary-radius;
+    display: flex;
+    padding: $primary-padding;
+    align-items: center;
+    @include adaptive-size;
+  }
+}
+
+.list__item-title,
+.list__item-description,
+.list__item-tag,
+.list__item-date {
+  overflow-wrap: break-word; // 👈 Переносит длинные слова
+  word-wrap: break-word; // 👈 Для старых браузеров
+  word-break: break-word; // 👈 Переносит любые длинные слова
+}

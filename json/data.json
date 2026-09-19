@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "title": "cxczxc",
+      "description": "Без описания",
+      "complete": false,
+      "date": "04.09.2026",
+      "id": "GpESO2_isHU"
+    },
+    {
+      "title": "dasdasd",
+      "description": "Без описания",
+      "complete": false,
+      "date": "04.09.2026",
+      "id": "e7ffM153EI0"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

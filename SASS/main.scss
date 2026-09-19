@@ -1,0 +1,11 @@
+@import "./base/base";
+@import "./base/reset";
+
+// Стили компонентов
+@import "../src/TaskInput/task-input";
+@import "../src/Title/title";
+@import "../src/ListTask/list";
+@import "../src/Filter/filter";
+@import "../src/ListEmpty/list-empty";
+@import "../src/ButtonDeleteaAndCount/button-delete";
+@import "../SASS/base/filter-buttons";

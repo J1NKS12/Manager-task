@@ -1,0 +1,25 @@
+// Селекторы
+$primary-padding: 5px 20px;
+$margin-bottom: 30px;
+$primary-color: black;
+$flex-direction-default: column;
+$primary-transition: all 0.2s ease;
+$border-red: 1px solid red;
+$border-black: 1px solid black;
+$primary-radius: 10px;
+$primary-gap: 10px;
+$cursor: pointer;
+$primary-font-weight: 600;
+$primary-font-size: clamp(12px, 1.5vw, 16px);
+
+// Сетка
+$grid-template-columns-three: repeat(3, 1fr);
+$grid-template-columns-two: repeat(2, 1fr);
+$grid-template-columns-one: 1fr;
+
+// Адаптив
+$mobile: 375px;
+$mobile-large: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1280px;
