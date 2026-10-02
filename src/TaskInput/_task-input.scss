@@ -1,0 +1,116 @@
+@import "../../SASS/base/variables";
+@import "../../SASS/base/mixin.scss";
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: $cursor;
+  padding: 4px 10px;
+  border-radius: 8px;
+  transition: $primary-transition;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+    transform: rotate(90deg);
+  }
+}
+
+.task-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 16px;
+
+  &__title,
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    margin-bottom: $margin-bottom;
+  }
+
+  &-btn--delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $primary-radius;
+    padding: 12px 24px;
+    transition: $primary-transition;
+    background-color: transparent;
+    color: black;
+    border: $border-black;
+    cursor: $cursor;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 8px;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  label {
+    font-weight: $primary-font-weight;
+    font-size: clamp(14px, 1.5vw, 17px);
+    color: #333;
+  }
+
+  input,
+  textarea {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: $primary-radius;
+    font-size: 15px;
+    font-family: inherit;
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border-color: #6c5ce7;
+      box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+}

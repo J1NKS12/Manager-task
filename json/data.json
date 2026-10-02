@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "title": "Купить продукты",
+      "description": "Молоко, хлеб, яйца, масло",
+      "complete": false,
+      "date": "02.10.2026",
+      "id": "XCJ9AR22ml4"
+    },
+    {
+      "title": "Заняться спортом",
+      "description": "Пробежка 5км, отжимания",
+      "complete": false,
+      "date": "02.10.2026",
+      "id": "SPOFfq40HPc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

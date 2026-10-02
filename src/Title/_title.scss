@@ -1,0 +1,11 @@
+@import "../../SASS/base/mixin.scss";
+@import "../../SASS/base/variables";
+
+.title {
+  display: flex;
+  margin-bottom: $margin-bottom;
+  font-weight: $primary-font-weight;
+  font-size: clamp(19px, 1.5vw, 35px);
+  padding: 10px;
+  @include glass-card;
+}

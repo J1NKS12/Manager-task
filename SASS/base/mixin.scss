@@ -1,0 +1,13 @@
+@mixin glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(6, 6, 6, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+@mixin adaptive-size {
+  font-size: clamp(12px, 2vw, 16px);
+  display: flex;
+  align-items: center;
+}

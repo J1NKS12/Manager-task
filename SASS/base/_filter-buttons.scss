@@ -1,0 +1,26 @@
+@import "../../SASS/base/variables";
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: $margin-bottom;
+  margin-left: 8px;
+
+  &__all,
+  &__done,
+  &__pending {
+    border-radius: 10px;
+    padding: 7px;
+    border: none;
+  }
+
+  &__all {
+    background: rgba(255, 59, 59, 0.549);
+  }
+  &__done {
+    background: orange;
+  }
+  &__pending {
+    background: aqua;
+  }
+}
